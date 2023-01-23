@@ -1,0 +1,1390 @@
+{
+  "name": "baseline",
+  "action-rules": [
+    {
+      "name": "play-definitely-playable-0",
+      "positive-conditions": [
+        "self_knowledge_0_definitely_playable"
+      ],
+      "negative-conditions": [],
+      "action": "play_0",
+      "weight": 10
+    },
+    {
+      "name": "play-definitely-playable-1",
+      "positive-conditions": [
+        "self_knowledge_1_definitely_playable"
+      ],
+      "negative-conditions": [],
+      "action": "play_1",
+      "weight": 10
+    },
+    {
+      "name": "play-definitely-playable-2",
+      "positive-conditions": [
+        "self_knowledge_2_definitely_playable"
+      ],
+      "negative-conditions": [],
+      "action": "play_2",
+      "weight": 10
+    },
+    {
+      "name": "play-definitely-playable-3",
+      "positive-conditions": [
+        "self_knowledge_3_definitely_playable"
+      ],
+      "negative-conditions": [],
+      "action": "play_3",
+      "weight": 10
+    },
+    {
+      "name": "play-definitely-playable-4",
+      "positive-conditions": [
+        "self_knowledge_4_definitely_playable"
+      ],
+      "negative-conditions": [],
+      "action": "play_4",
+      "weight": 10
+    },
+    {
+      "name": "play-just-hinted-0",
+      "positive-conditions": [
+        "self_knowledge_0_just_hinted"
+      ],
+      "negative-conditions": [
+        "self_knowledge_0_definitely_not_playable",
+        "self_knowledge_1_just_hinted",
+        "self_knowledge_2_just_hinted",
+        "self_knowledge_3_just_hinted",
+        "self_knowledge_4_just_hinted"
+      ],
+      "action": "play_0",
+      "weight": 5
+    },
+    {
+      "name": "play-just-hinted-1",
+      "positive-conditions": [
+        "self_knowledge_1_just_hinted"
+      ],
+      "negative-conditions": [
+        "self_knowledge_1_definitely_not_playable",
+        "self_knowledge_2_just_hinted",
+        "self_knowledge_3_just_hinted",
+        "self_knowledge_4_just_hinted"
+      ],
+      "action": "play_1",
+      "weight": 5
+    },
+    {
+      "name": "play-just-hinted-2",
+      "positive-conditions": [
+        "self_knowledge_2_just_hinted"
+      ],
+      "negative-conditions": [
+        "self_knowledge_2_definitely_not_playable",
+        "self_knowledge_3_just_hinted",
+        "self_knowledge_4_just_hinted"
+      ],
+      "action": "play_2",
+      "weight": 5
+    },
+    {
+      "name": "play-just-hinted-3",
+      "positive-conditions": [
+        "self_knowledge_3_just_hinted"
+      ],
+      "negative-conditions": [
+        "self_knowledge_3_definitely_not_playable",
+        "self_knowledge_4_just_hinted"
+      ],
+      "action": "play_3",
+      "weight": 5
+    },
+    {
+      "name": "play-just-hinted-4",
+      "positive-conditions": [
+        "self_knowledge_4_just_hinted"
+      ],
+      "negative-conditions": [
+        "self_knowledge_4_definitely_not_playable"
+      ],
+      "action": "play_4",
+      "weight": 5
+    },
+    {
+      "name": "hint-color-definitely-playable-0",
+      "positive-conditions": [
+        "partner_hand_0_playable",
+        "partner_knowledge_0_known_rank"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_0_known_color"
+      ],
+      "action": "hint_color_0",
+      "weight": 5
+    },
+    {
+      "name": "hint-color-definitely-useless-0",
+      "positive-conditions": [
+        "partner_hand_0_useless",
+        "partner_knowledge_0_known_rank"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_0_known_color"
+      ],
+      "action": "hint_color_0",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-playable-0",
+      "positive-conditions": [
+        "partner_hand_0_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_hand_same_color_0_1",
+        "partner_hand_same_color_0_2",
+        "partner_hand_same_color_0_3",
+        "partner_hand_same_color_0_4",
+        "partner_knowledge_0_known_color"
+      ],
+      "action": "hint_color_0",
+      "weight": 5
+    },
+    {
+      "name": "hint-rank-definitely-playable-0",
+      "positive-conditions": [
+        "partner_hand_0_playable",
+        "partner_knowledge_0_known_color"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_0_known_rank"
+      ],
+      "action": "hint_rank_0",
+      "weight": 5
+    },
+    {
+      "name": "hint-rank-definitely-useless-0",
+      "positive-conditions": [
+        "partner_hand_0_useless",
+        "partner_knowledge_0_known_color"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_0_known_rank"
+      ],
+      "action": "hint_rank_0",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-playable-0",
+      "positive-conditions": [
+        "partner_hand_0_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_hand_same_rank_0_1",
+        "partner_hand_same_rank_0_2",
+        "partner_hand_same_rank_0_3",
+        "partner_hand_same_rank_0_4",
+        "partner_knowledge_0_known_rank"
+      ],
+      "action": "hint_rank_0",
+      "weight": 5
+    },
+    {
+      "name": "hint-color-definitely-playable-1",
+      "positive-conditions": [
+        "partner_hand_1_playable",
+        "partner_knowledge_1_known_rank"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_1_known_color"
+      ],
+      "action": "hint_color_1",
+      "weight": 5
+    },
+    {
+      "name": "hint-color-definitely-useless-1",
+      "positive-conditions": [
+        "partner_hand_1_useless",
+        "partner_knowledge_1_known_rank"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_1_known_color"
+      ],
+      "action": "hint_color_1",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-playable-1",
+      "positive-conditions": [
+        "partner_hand_1_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_hand_same_color_1_2",
+        "partner_hand_same_color_1_3",
+        "partner_hand_same_color_1_4",
+        "partner_knowledge_1_known_color"
+      ],
+      "action": "hint_color_1",
+      "weight": 5
+    },
+    {
+      "name": "hint-rank-definitely-playable-1",
+      "positive-conditions": [
+        "partner_hand_1_playable",
+        "partner_knowledge_1_known_color"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_1_known_rank"
+      ],
+      "action": "hint_rank_1",
+      "weight": 5
+    },
+    {
+      "name": "hint-rank-definitely-useless-1",
+      "positive-conditions": [
+        "partner_hand_1_useless",
+        "partner_knowledge_1_known_color"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_1_known_rank"
+      ],
+      "action": "hint_rank_1",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-playable-1",
+      "positive-conditions": [
+        "partner_hand_1_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_hand_same_rank_1_2",
+        "partner_hand_same_rank_1_3",
+        "partner_hand_same_rank_1_4",
+        "partner_knowledge_1_known_rank"
+      ],
+      "action": "hint_rank_1",
+      "weight": 5
+    },
+    {
+      "name": "hint-color-definitely-playable-2",
+      "positive-conditions": [
+        "partner_hand_2_playable",
+        "partner_knowledge_2_known_rank"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_2_known_color"
+      ],
+      "action": "hint_color_2",
+      "weight": 5
+    },
+    {
+      "name": "hint-color-definitely-useless-2",
+      "positive-conditions": [
+        "partner_hand_2_useless",
+        "partner_knowledge_2_known_rank"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_2_known_color"
+      ],
+      "action": "hint_color_2",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-playable-2",
+      "positive-conditions": [
+        "partner_hand_2_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_hand_same_color_2_3",
+        "partner_hand_same_color_2_4",
+        "partner_knowledge_2_known_color"
+      ],
+      "action": "hint_color_2",
+      "weight": 5
+    },
+    {
+      "name": "hint-rank-definitely-playable-2",
+      "positive-conditions": [
+        "partner_hand_2_playable",
+        "partner_knowledge_2_known_color"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_2_known_rank"
+      ],
+      "action": "hint_rank_2",
+      "weight": 5
+    },
+    {
+      "name": "hint-rank-definitely-useless-2",
+      "positive-conditions": [
+        "partner_hand_2_useless",
+        "partner_knowledge_2_known_color"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_2_known_rank"
+      ],
+      "action": "hint_rank_2",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-playable-2",
+      "positive-conditions": [
+        "partner_hand_2_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_hand_same_rank_2_3",
+        "partner_hand_same_rank_2_4",
+        "partner_knowledge_2_known_rank"
+      ],
+      "action": "hint_rank_2",
+      "weight": 5
+    },
+    {
+      "name": "hint-color-definitely-playable-3",
+      "positive-conditions": [
+        "partner_hand_3_playable",
+        "partner_knowledge_3_known_rank"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_3_known_color"
+      ],
+      "action": "hint_color_3",
+      "weight": 5
+    },
+    {
+      "name": "hint-color-definitely-useless-3",
+      "positive-conditions": [
+        "partner_hand_3_useless",
+        "partner_knowledge_3_known_rank"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_3_known_color"
+      ],
+      "action": "hint_color_3",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-playable-3",
+      "positive-conditions": [
+        "partner_hand_3_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_hand_same_color_3_4",
+        "partner_knowledge_3_known_color"
+      ],
+      "action": "hint_color_3",
+      "weight": 5
+    },
+    {
+      "name": "hint-rank-definitely-playable-3",
+      "positive-conditions": [
+        "partner_hand_3_playable",
+        "partner_knowledge_3_known_color"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_3_known_rank"
+      ],
+      "action": "hint_rank_3",
+      "weight": 5
+    },
+    {
+      "name": "hint-rank-definitely-useless-3",
+      "positive-conditions": [
+        "partner_hand_3_useless",
+        "partner_knowledge_3_known_color"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_3_known_rank"
+      ],
+      "action": "hint_rank_3",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-playable-3",
+      "positive-conditions": [
+        "partner_hand_3_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_hand_same_rank_3_4",
+        "partner_knowledge_3_known_rank"
+      ],
+      "action": "hint_rank_3",
+      "weight": 5
+    },
+    {
+      "name": "hint-color-definitely-playable-4",
+      "positive-conditions": [
+        "partner_hand_4_playable",
+        "partner_knowledge_4_known_rank"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_4_known_color"
+      ],
+      "action": "hint_color_4",
+      "weight": 5
+    },
+    {
+      "name": "hint-color-definitely-useless-4",
+      "positive-conditions": [
+        "partner_hand_4_useless",
+        "partner_knowledge_4_known_rank"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_4_known_color"
+      ],
+      "action": "hint_color_4",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-playable-4",
+      "positive-conditions": [
+        "partner_hand_4_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_4_known_color"
+      ],
+      "action": "hint_color_4",
+      "weight": 5
+    },
+    {
+      "name": "hint-rank-definitely-playable-4",
+      "positive-conditions": [
+        "partner_hand_4_playable",
+        "partner_knowledge_4_known_color"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_4_known_rank"
+      ],
+      "action": "hint_rank_4",
+      "weight": 5
+    },
+    {
+      "name": "hint-rank-definitely-useless-4",
+      "positive-conditions": [
+        "partner_hand_4_useless",
+        "partner_knowledge_4_known_color"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_4_known_rank"
+      ],
+      "action": "hint_rank_4",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-playable-4",
+      "positive-conditions": [
+        "partner_hand_4_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_4_known_rank"
+      ],
+      "action": "hint_rank_4",
+      "weight": 5
+    },
+    {
+      "name": "hint-color-unplayable-blue-0",
+      "positive-conditions": [
+        "partner_hand_0_is_blue",
+        "partner_knowledge_0_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_0_known_color"
+      ],
+      "action": "hint_color_0",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-blue-1",
+      "positive-conditions": [
+        "partner_hand_1_is_blue",
+        "partner_knowledge_1_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_1_known_color"
+      ],
+      "action": "hint_color_1",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-blue-2",
+      "positive-conditions": [
+        "partner_hand_2_is_blue",
+        "partner_knowledge_2_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_2_known_color"
+      ],
+      "action": "hint_color_2",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-blue-3",
+      "positive-conditions": [
+        "partner_hand_3_is_blue",
+        "partner_knowledge_3_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_3_known_color"
+      ],
+      "action": "hint_color_3",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-blue-4",
+      "positive-conditions": [
+        "partner_hand_4_is_blue",
+        "partner_knowledge_4_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_4_known_color"
+      ],
+      "action": "hint_color_4",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-green-0",
+      "positive-conditions": [
+        "partner_hand_0_is_green",
+        "partner_knowledge_0_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_0_known_color"
+      ],
+      "action": "hint_color_0",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-green-1",
+      "positive-conditions": [
+        "partner_hand_1_is_green",
+        "partner_knowledge_1_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_1_known_color"
+      ],
+      "action": "hint_color_1",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-green-2",
+      "positive-conditions": [
+        "partner_hand_2_is_green",
+        "partner_knowledge_2_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_2_known_color"
+      ],
+      "action": "hint_color_2",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-green-3",
+      "positive-conditions": [
+        "partner_hand_3_is_green",
+        "partner_knowledge_3_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_3_known_color"
+      ],
+      "action": "hint_color_3",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-green-4",
+      "positive-conditions": [
+        "partner_hand_4_is_green",
+        "partner_knowledge_4_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_4_known_color"
+      ],
+      "action": "hint_color_4",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-red-0",
+      "positive-conditions": [
+        "partner_hand_0_is_red",
+        "partner_knowledge_0_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_0_known_color"
+      ],
+      "action": "hint_color_0",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-red-1",
+      "positive-conditions": [
+        "partner_hand_1_is_red",
+        "partner_knowledge_1_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_1_known_color"
+      ],
+      "action": "hint_color_1",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-red-2",
+      "positive-conditions": [
+        "partner_hand_2_is_red",
+        "partner_knowledge_2_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_2_known_color"
+      ],
+      "action": "hint_color_2",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-red-3",
+      "positive-conditions": [
+        "partner_hand_3_is_red",
+        "partner_knowledge_3_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_3_known_color"
+      ],
+      "action": "hint_color_3",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-red-4",
+      "positive-conditions": [
+        "partner_hand_4_is_red",
+        "partner_knowledge_4_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_4_known_color"
+      ],
+      "action": "hint_color_4",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-white-0",
+      "positive-conditions": [
+        "partner_hand_0_is_white",
+        "partner_knowledge_0_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_0_known_color"
+      ],
+      "action": "hint_color_0",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-white-1",
+      "positive-conditions": [
+        "partner_hand_1_is_white",
+        "partner_knowledge_1_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_1_known_color"
+      ],
+      "action": "hint_color_1",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-white-2",
+      "positive-conditions": [
+        "partner_hand_3_is_white",
+        "partner_knowledge_3_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_3_known_color"
+      ],
+      "action": "hint_color_3",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-white-4",
+      "positive-conditions": [
+        "partner_hand_4_is_white",
+        "partner_knowledge_4_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_4_known_color"
+      ],
+      "action": "hint_color_4",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-yellow-0",
+      "positive-conditions": [
+        "partner_hand_0_is_yellow",
+        "partner_knowledge_0_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_0_known_color"
+      ],
+      "action": "hint_color_0",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-yellow-1",
+      "positive-conditions": [
+        "partner_hand_1_is_yellow",
+        "partner_knowledge_1_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_1_known_color"
+      ],
+      "action": "hint_color_1",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-yellow-2",
+      "positive-conditions": [
+        "partner_hand_2_is_yellow",
+        "partner_knowledge_2_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_2_known_color"
+      ],
+      "action": "hint_color_2",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-yellow-3",
+      "positive-conditions": [
+        "partner_hand_3_is_yellow",
+        "partner_knowledge_3_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_3_known_color"
+      ],
+      "action": "hint_color_3",
+      "weight": 2
+    },
+    {
+      "name": "hint-color-unplayable-yellow-4",
+      "positive-conditions": [
+        "partner_hand_4_is_yellow",
+        "partner_knowledge_4_definitely_not_playable"
+      ],
+      "negative-conditions": [
+        "hint_0",
+        "partner_knowledge_4_known_color"
+      ],
+      "action": "hint_color_4",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-1-0",
+      "positive-conditions": [
+        "partner_hand_0_is_1"
+      ],
+      "negative-conditions": [
+        "board_blue_0",
+        "board_green_0",
+        "board_red_0",
+        "board_white_0",
+        "board_yellow_0",
+        "hint_0",
+        "partner_knowledge_0_known_rank"
+      ],
+      "action": "hint_rank_0",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-1-1",
+      "positive-conditions": [
+        "partner_hand_1_is_1"
+      ],
+      "negative-conditions": [
+        "board_blue_0",
+        "board_green_0",
+        "board_red_0",
+        "board_white_0",
+        "board_yellow_0",
+        "hint_0",
+        "partner_knowledge_1_known_rank"
+      ],
+      "action": "hint_rank_1",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-1-2",
+      "positive-conditions": [
+        "partner_hand_2_is_1"
+      ],
+      "negative-conditions": [
+        "board_blue_0",
+        "board_green_0",
+        "board_red_0",
+        "board_white_0",
+        "board_yellow_0",
+        "hint_0",
+        "partner_knowledge_2_known_rank"
+      ],
+      "action": "hint_rank_2",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-1-3",
+      "positive-conditions": [
+        "partner_hand_3_is_1"
+      ],
+      "negative-conditions": [
+        "board_blue_0",
+        "board_green_0",
+        "board_red_0",
+        "board_white_0",
+        "board_yellow_0",
+        "hint_0",
+        "partner_knowledge_3_known_rank"
+      ],
+      "action": "hint_rank_3",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-1-4",
+      "positive-conditions": [
+        "partner_hand_4_is_1"
+      ],
+      "negative-conditions": [
+        "board_blue_0",
+        "board_green_0",
+        "board_red_0",
+        "board_white_0",
+        "board_yellow_0",
+        "hint_0",
+        "partner_knowledge_4_known_rank"
+      ],
+      "action": "hint_rank_4",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-2-0",
+      "positive-conditions": [
+        "partner_hand_0_is_2"
+      ],
+      "negative-conditions": [
+        "board_blue_1",
+        "board_green_1",
+        "board_red_1",
+        "board_white_1",
+        "board_yellow_1",
+        "hint_0",
+        "partner_knowledge_0_known_rank"
+      ],
+      "action": "hint_rank_0",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-2-1",
+      "positive-conditions": [
+        "partner_hand_1_is_2"
+      ],
+      "negative-conditions": [
+        "board_blue_1",
+        "board_green_1",
+        "board_red_1",
+        "board_white_1",
+        "board_yellow_1",
+        "hint_0",
+        "partner_knowledge_1_known_rank"
+      ],
+      "action": "hint_rank_1",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-2-2",
+      "positive-conditions": [
+        "partner_hand_2_is_2"
+      ],
+      "negative-conditions": [
+        "board_blue_1",
+        "board_green_1",
+        "board_red_1",
+        "board_white_1",
+        "board_yellow_1",
+        "hint_0",
+        "partner_knowledge_2_known_rank"
+      ],
+      "action": "hint_rank_2",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-2-3",
+      "positive-conditions": [
+        "partner_hand_3_is_2"
+      ],
+      "negative-conditions": [
+        "board_blue_1",
+        "board_green_1",
+        "board_red_1",
+        "board_white_1",
+        "board_yellow_1",
+        "hint_0",
+        "partner_knowledge_3_known_rank"
+      ],
+      "action": "hint_rank_3",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-2-4",
+      "positive-conditions": [
+        "partner_hand_4_is_2"
+      ],
+      "negative-conditions": [
+        "board_blue_1",
+        "board_green_1",
+        "board_red_1",
+        "board_white_1",
+        "board_yellow_1",
+        "hint_0",
+        "partner_knowledge_4_known_rank"
+      ],
+      "action": "hint_rank_4",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-3-0",
+      "positive-conditions": [
+        "partner_hand_0_is_3"
+      ],
+      "negative-conditions": [
+        "board_blue_2",
+        "board_green_2",
+        "board_red_2",
+        "board_white_2",
+        "board_yellow_2",
+        "hint_0",
+        "partner_knowledge_0_known_rank"
+      ],
+      "action": "hint_rank_0",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-3-1",
+      "positive-conditions": [
+        "partner_hand_1_is_3"
+      ],
+      "negative-conditions": [
+        "board_blue_2",
+        "board_green_2",
+        "board_red_2",
+        "board_white_2",
+        "board_yellow_2",
+        "hint_0",
+        "partner_knowledge_1_known_rank"
+      ],
+      "action": "hint_rank_1",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-3-2",
+      "positive-conditions": [
+        "partner_hand_2_is_3"
+      ],
+      "negative-conditions": [
+        "board_blue_2",
+        "board_green_2",
+        "board_red_2",
+        "board_white_2",
+        "board_yellow_2",
+        "hint_0",
+        "partner_knowledge_2_known_rank"
+      ],
+      "action": "hint_rank_2",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-3-3",
+      "positive-conditions": [
+        "partner_hand_3_is_3"
+      ],
+      "negative-conditions": [
+        "board_blue_2",
+        "board_green_2",
+        "board_red_2",
+        "board_white_2",
+        "board_yellow_2",
+        "hint_0",
+        "partner_knowledge_3_known_rank"
+      ],
+      "action": "hint_rank_3",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-3-4",
+      "positive-conditions": [
+        "partner_hand_4_is_3"
+      ],
+      "negative-conditions": [
+        "board_blue_2",
+        "board_green_2",
+        "board_red_2",
+        "board_white_2",
+        "board_yellow_2",
+        "hint_0",
+        "partner_knowledge_4_known_rank"
+      ],
+      "action": "hint_rank_4",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-4-0",
+      "positive-conditions": [
+        "partner_hand_0_is_4"
+      ],
+      "negative-conditions": [
+        "board_blue_3",
+        "board_green_3",
+        "board_red_3",
+        "board_white_3",
+        "board_yellow_3",
+        "hint_0",
+        "partner_knowledge_0_known_rank"
+      ],
+      "action": "hint_rank_0",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-4-1",
+      "positive-conditions": [
+        "partner_hand_1_is_4"
+      ],
+      "negative-conditions": [
+        "board_blue_3",
+        "board_green_3",
+        "board_red_3",
+        "board_white_3",
+        "board_yellow_3",
+        "hint_0",
+        "partner_knowledge_1_known_rank"
+      ],
+      "action": "hint_rank_1",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-4-2",
+      "positive-conditions": [
+        "partner_hand_2_is_4"
+      ],
+      "negative-conditions": [
+        "board_blue_3",
+        "board_green_3",
+        "board_red_3",
+        "board_white_3",
+        "board_yellow_3",
+        "hint_0",
+        "partner_knowledge_2_known_rank"
+      ],
+      "action": "hint_rank_2",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-4-3",
+      "positive-conditions": [
+        "partner_hand_3_is_4"
+      ],
+      "negative-conditions": [
+        "board_blue_3",
+        "board_green_3",
+        "board_red_3",
+        "board_white_3",
+        "board_yellow_3",
+        "hint_0",
+        "partner_knowledge_3_known_rank"
+      ],
+      "action": "hint_rank_3",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-4-4",
+      "positive-conditions": [
+        "partner_hand_4_is_4"
+      ],
+      "negative-conditions": [
+        "board_blue_3",
+        "board_green_3",
+        "board_red_3",
+        "board_white_3",
+        "board_yellow_3",
+        "hint_0",
+        "partner_knowledge_4_known_rank"
+      ],
+      "action": "hint_rank_4",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-5-0",
+      "positive-conditions": [
+        "partner_hand_0_is_5"
+      ],
+      "negative-conditions": [
+        "board_blue_4",
+        "board_green_4",
+        "board_red_4",
+        "board_white_4",
+        "board_yellow_4",
+        "hint_0",
+        "partner_knowledge_0_known_rank"
+      ],
+      "action": "hint_rank_0",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-5-1",
+      "positive-conditions": [
+        "partner_hand_1_is_5"
+      ],
+      "negative-conditions": [
+        "board_blue_4",
+        "board_green_4",
+        "board_red_4",
+        "board_white_4",
+        "board_yellow_4",
+        "hint_0",
+        "partner_knowledge_1_known_rank"
+      ],
+      "action": "hint_rank_1",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-5-2",
+      "positive-conditions": [
+        "partner_hand_2_is_5"
+      ],
+      "negative-conditions": [
+        "board_blue_4",
+        "board_green_4",
+        "board_red_4",
+        "board_white_4",
+        "board_yellow_4",
+        "hint_0",
+        "partner_knowledge_2_known_rank"
+      ],
+      "action": "hint_rank_2",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-5-3",
+      "positive-conditions": [
+        "partner_hand_3_is_5"
+      ],
+      "negative-conditions": [
+        "board_blue_4",
+        "board_green_4",
+        "board_red_4",
+        "board_white_4",
+        "board_yellow_4",
+        "hint_0",
+        "partner_knowledge_3_known_rank"
+      ],
+      "action": "hint_rank_3",
+      "weight": 2
+    },
+    {
+      "name": "hint-rank-unplayable-5-4",
+      "positive-conditions": [
+        "partner_hand_4_is_5"
+      ],
+      "negative-conditions": [
+        "board_blue_4",
+        "board_green_4",
+        "board_red_4",
+        "board_white_4",
+        "board_yellow_4",
+        "hint_0",
+        "partner_knowledge_4_known_rank"
+      ],
+      "action": "hint_rank_4",
+      "weight": 2
+    },
+    {
+      "name": "discard-noinfo-0",
+      "positive-conditions": [
+        "hint_0"
+      ],
+      "negative-conditions": [
+        "hint_8",
+        "self_knowledge_0_known_color",
+        "self_knowledge_0_known_rank"
+      ],
+      "action": "discard_0",
+      "weight": 1
+    },
+    {
+      "name": "discard-noinfo-1",
+      "positive-conditions": [
+        "hint_0"
+      ],
+      "negative-conditions": [
+        "hint_8",
+        "self_knowledge_1_known_color",
+        "self_knowledge_1_known_rank"
+      ],
+      "action": "discard_1",
+      "weight": 1
+    },
+    {
+      "name": "discard-noinfo-2",
+      "positive-conditions": [
+        "hint_0"
+      ],
+      "negative-conditions": [
+        "hint_8",
+        "self_knowledge_2_known_color",
+        "self_knowledge_2_known_rank"
+      ],
+      "action": "discard_2",
+      "weight": 1
+    },
+    {
+      "name": "discard-noinfo-3",
+      "positive-conditions": [
+        "hint_0"
+      ],
+      "negative-conditions": [
+        "hint_8",
+        "self_knowledge_3_known_color",
+        "self_knowledge_3_known_rank"
+      ],
+      "action": "discard_3",
+      "weight": 1
+    },
+    {
+      "name": "discard-noinfo-4",
+      "positive-conditions": [
+        "hint_0"
+      ],
+      "negative-conditions": [
+        "hint_8",
+        "self_knowledge_4_known_color",
+        "self_knowledge_4_known_rank"
+      ],
+      "action": "discard_4",
+      "weight": 1
+    },
+    {
+      "name": "discard-definitely-useless-0",
+      "positive-conditions": [
+        "self_knowledge_0_definitely_useless"
+      ],
+      "negative-conditions": [
+        "hint_8"
+      ],
+      "action": "discard_0",
+      "weight": 2
+    },
+    {
+      "name": "discard-definitely-useless-1",
+      "positive-conditions": [
+        "self_knowledge_1_definitely_useless"
+      ],
+      "negative-conditions": [
+        "hint_8"
+      ],
+      "action": "discard_1",
+      "weight": 2
+    },
+    {
+      "name": "discard-definitely-useless-2",
+      "positive-conditions": [
+        "self_knowledge_2_definitely_useless"
+      ],
+      "negative-conditions": [
+        "hint_8"
+      ],
+      "action": "discard_2",
+      "weight": 2
+    },
+    {
+      "name": "discard-definitely-useless-3",
+      "positive-conditions": [
+        "self_knowledge_3_definitely_useless"
+      ],
+      "negative-conditions": [
+        "hint_8"
+      ],
+      "action": "discard_3",
+      "weight": 2
+    },
+    {
+      "name": "discard-definitely-useless-4",
+      "positive-conditions": [
+        "self_knowledge_4_definitely_useless"
+      ],
+      "negative-conditions": [
+        "hint_8"
+      ],
+      "action": "discard_4",
+      "weight": 2
+    },
+    {
+      "name": "discard-default",
+      "positive-conditions": [],
+      "negative-conditions": [
+        "hint_8"
+      ],
+      "action": "discard_0",
+      "weight": 0.001
+    },
+    {
+      "name": "hint-default",
+      "positive-conditions": [],
+      "negative-conditions": [
+        "hint_0"
+      ],
+      "action": "hint_color_0",
+      "weight": 0.001
+    }
+  ]
+}
